@@ -1,0 +1,143 @@
+Core collection interfaces
+--------------------------
++ Collection
+    + Set
+        + Sorted Set
+    + List
+    + Queue
+    + Dequeue
+
++ Map
+    +Sorted Map
+
+* All of the above core collection interfaces are generic
+
+* Collection :: It is the root of the collection hierarchy
+* Set :: Doesn't contain any duplicates
+* List :: Maintains insertion order
+* Queue :: ..
+* Dequeue :: ..
+
+* Map :: Maintains key -> value pair
+
+* Sorted Set :: Maintains elements in ascending order
+* Sorted Map :: Maintains keys in ascending order
+
+Traversing collections
+----------------------
+Three ways
+* Aggregate operations (JDK 8 and after)
+* for each
+* Iterators
+
+Collection interface bulk operations
+------------------------------------
+* containsAll
+* addAll
+* removeAll
+* retainAll
+* clear
+
+Array operations
+----------------
+* toArray()
+
+The Set interface
+-----------------
+Three general purpose set implementations
+* HashSet
+    + It stores it's elements in a hash table. It is the best performing implementation of the Set. Doesn't guarantee
+      the order of iteration.
+
+* TreeSet
+    + Stores it's elements in a red black tree. Orders elements based on their values. Slower than HashSet.
+
+* LinkedHashSet
+    + Implemented as a hash table with a linked list running through it. Orders elements based on the order of insertion
+
+The List interface
+------------------
+Two general purpose List implementations
+* ArrayList
+    + Better performing implementation
+* LinkedList
+    + ..
+
+Positional access & Search operations
+* Positional Access
+    + get
+    + set
+    + remove
+    + indexOf
+    + lastIndexOf
+
+* Iterator
+* Range view operations
+* Algorithms on list
+    + sort
+    + shuffle
+    + reverse
+    + rotate
+    + swap
+    + replaceAll
+    + fill
+    + copy
+    + binarySearch
+    + indexOfSubList
+    + lastIndexOfSubList
+
+The Queue interface
+-------------------
+Collection for holding elements prior to processing
+Most Queues are implemented in FIFO order except certain exceptions such as priority queue
+
+The Dequeue interface
+---------------------
+It's a double ended queue
+It's a richer abstract type providing better functionality than both stack and queue
+
+The Map interface
+-----------------
+Maintains key -> value pair
+Doesn't contain duplicate keys
+Each keys maps to at most one value
+
+* Basic operations
+    + put
+    + get
+    + remove
+    + containsKey
+    + containsValue
+    + size
+    + empty
+    + putAll
+    + clear
+    + keySet
+    + entrySet
+    + values
+
+* Three general purpose implementations
+    + HashMap
+    + Tree Map
+    + LinkedHashMap
+    + MultiMap (not implemented by java, could be extended)
+
+Object Ordering
+---------------
+
+SortedSet Interface
+-------------------
+Maintains it's elements in ascending order based on natural ordering or according to the comparator provided
+* Provides below operations apart from normal set operations
+    + Range view
+    + Endpoints
+    + Comparator
+
+SortedMap Interface
+-------------------
+Maintains it's entries in ascending order of keys based on natural ordering or according to the comparator provided
+* Provides below operations apart from normal map operations
+    + Range view
+    + Endpoints
+    + Comparator
+
